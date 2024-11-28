@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carrito de Compras de Juegos</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="ventana" id="vent" style="display: none;">
+        <div>
+            <div class="salir"><a href="#"><img src="./5GAME STORE_files/inicio.png" alt="Inicio"></a></div>
+            <h1>SECCIONES</h1>
+            <a href="javascript:cerrar()">
+                <img src="./5GAME STORE_files/error.png" alt="Cerrar ventana" id="cerrar">
+            </a>
+            <div class="lupa">
+                <img src="./5GAME STORE_files/busqueda.png" id="busque" alt="Icono búsqueda">
+            </div>
+        </div>
+        <div id="cosas">
+            <div id="hardware">
+                <h3>HARDWARE</h3>
+                <div class="Contenido">
+                    <ul>
+                        <li><a href="#" class="produc-lincks">PC y Portátiles</a></li>
+                        <li><a href="#" class="produc-lincks">Monitores</a></li>
+                        <li><a href="#" class="produc-lincks">Periféricos</a></li>
+                        <li><a href="#" class="produc-lincks">Tarjetas gráficas</a></li>
+                        <li><a href="#" class="produc-lincks">Auriculares y altavoces</a></li>
+                        <li><a href="#" class="produc-lincks">Mandos y Joystick</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div id="generos">
+                <h3>GÉNEROS</h3>
+                <div class="Contenido">
+                    <ul>
+                        <li><a href="#" class="produc-lincks">RPG</a></li>
+                        <li><a href="#" class="produc-lincks">Deportes</a></li>
+                        <li><a href="#" class="produc-lincks">Coches</a></li>
+                        <li><a href="#" class="produc-lincks">Acción</a></li>
+                        <li><a href="#" class="produc-lincks">Estrategia</a></li>
+                        <li><a href="#" class="produc-lincks">Simulación</a></li>
+                        <li><a href="#" class="produc-lincks">MMO</a></li>
+                        <li><a href="#" class="produc-lincks">Battle Royale</a></li>
+                        <li><a href="#" class="produc-lincks">Educativo</a></li>
+                        <li><a href="#" class="produc-lincks">Plataformas</a></li>
+                        <li><a href="#" class="produc-lincks">Fútbol</a></li>
+                        <li><a href="#" class="produc-lincks">Aventura gráfica</a></li>
+                        <li><a href="#" class="produc-lincks">Minijuegos</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div id="plataformas">
+                <h3>PLATAFORMAS</h3>
+                <div class="Contenido">
+                    <ul>
+                        <li><a href="#" class="produc-lincks">PC</a></li>
+                        <li><a href="#" class="produc-lincks">PS4</a></li>
+                        <li><a href="#" class="produc-lincks">PS5</a></li>
+                        <li><a href="#" class="produc-lincks">Xbox</a></li>
+                        <li><a href="#" class="produc-lincks">Xbox One</a></li>
+                        <li><a href="#" class="produc-lincks">Nintendo Switch</a></li>
+                        <li><a href="#" class="produc-lincks">Android</a></li>
+                        <li><a href="#" class="produc-lincks">iOS</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div id="redes_e_info">
+            <div class="l_1">
+                <a href="#"><img src="./5GAME STORE_files/x.png" alt="X"></a>
+                <a href="#"><img src="./5GAME STORE_files/instagram.png" alt="instagram"></a>
+                <a href="#"><img src="./5GAME STORE_files/twitch.png" alt="twitch"></a>
+                <a href="#"><img src="./5GAME STORE_files/youtube.png" alt="youtube"></a>
+                <a href="#"><img src="./5GAME STORE_files/telegrama.png" alt="telegrama"></a>
+            </div>
+            <div class="l_2">
+                <a href="html/Vent_flot/aviso.html">Aviso Legal</a>
+                <a href="html/Vent_flot/condiciones.html">Condiciones de uso</a>
+                <a href="html/Vent_flot/politicas_cook.html">Política de cookies</a>
+                <a href="html/terminos/terminos.html">Términos y Condiciones</a>
+            </div>
+        </div>
+    </div>
+
+    <header>
+        <div class="selec">
+            <button type="button" onclick="abrir()"><img src="./5GAME STORE_files/seleccion.png" id="section" alt="Icono secciones"></button>
+        </div>
+        <h1>5GAME STORE</h1>
+        <div class="auth-links">
+            <a href="html/inicio/iniciar_sesion/login.html">Iniciar Sesión</a> | 
+            <a href="html/inicio/crear_cuenta/signup.html">Crear Cuenta</a>
+        </div>
+    </header>
+    <h2>Carrito de Compras</h2> 
+        <div class="producto"> 
+            <h3>Producto 1</h3> 
+            <p>Precio: $10.00</p> 
+            <button onclick="agregarAlCarrito('Producto 1', 10)">Agregar al Carrito</button> 
+        </div> 
+        <div class="producto"> 
+            <h3>Producto 2</h3> 
+            <p>Precio: $20.00</p> 
+            <button onclick="agregarAlCarrito('Producto 2', 20)">Agregar al Carrito</button> 
+        </div> 
+        <h3>Carrito</h3> 
+        <ul id="carrito"> <!-- Aquí se listarán los productos agregados --> 
+        </ul> 
+        <p id="total">Total: $0.00</p>
+    <script src="script.js"></script>
+</body>
+</html>
