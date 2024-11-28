@@ -1,0 +1,112 @@
+#cerrar {
+    position: absolute;
+    height: 35px;
+    right: 10px;
+    top: 10px;
+}
+
+#busque {
+    position: absolute;
+    right: 55px;
+    top: 65px;
+    height: 35px;
+    width: 35px;
+}
+
+.salir {
+    float: left;
+}
+
+#cosas {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    overflow: hidden;
+    box-sizing: border-box;
+    width: 100%;
+}
+
+#hardware, #generos, #plataformas {
+    height: auto;
+    width: 150px;
+    text-align: center;
+}
+
+#cosas > * {
+    flex: 1;
+    margin: 0 10px;
+}
+
+#cosas h3{
+    text-decoration: underline;
+}
+
+.produc-lincks{
+    text-decoration: none;
+    color: #FFF;
+    font-size: 24px;
+}
+.produc-lincks:hover{
+    color: slateblue;
+    text-decoration: underline;
+}
+
+#redes_e_info {
+    position: relative;
+    top: 12%;
+}
+
+/*Busqueda*/
+.lupa {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 5px;
+    background-color: #6a45837a;
+    width: fit-content;
+}
+
+.lupa input {
+    border: none;
+    outline: none;
+    padding: 5px;
+    font-size: 16px;
+    width: 200px;
+}
+
+.lupa button {
+    background: none;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+}
+
+.lupa img {
+    width: 20px;
+    height: 20px;
+}
+
+/*Ventana*/
+.ventana {
+    background-color: rgba(0, 0, 0, 0.85);
+    height: 90%;
+    width: 90%;
+    color: #FFF;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 18px;
+    text-align: center;
+    padding: 36px;
+    min-height: 250px;
+    border-radius: 15px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    display: none;
+}
+
+footer p, footer a {
+    color: #B3B3B3;
+}
