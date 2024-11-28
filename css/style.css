@@ -17,11 +17,12 @@ body {
 .icon-bars{
     height: 100px;
     color: #c52f4b;
+    cursor: pointer;
 }
 
 .icon-cart {
-    width: 24px;
-    height: 24px;
+    height: 100px;
+    color: #c52f4b;
     cursor: pointer;
 }
 
