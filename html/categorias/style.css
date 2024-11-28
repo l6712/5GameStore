@@ -11,3 +11,252 @@ body {
     display: flex;
     align-items: center;
 }
+
+/*icons*/
+
+.icon-bars{
+    height: 100px;
+    color: #c52f4b;
+}
+
+.icon-cart {
+    width: 24px;
+    height: 24px;
+    cursor: pointer;
+}
+
+/* Botones principales */
+.producto button {
+    background-color: #008bff;
+    color: #fff;
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 0.5rem;
+}
+
+.producto button:hover {
+    background-color: #0056b3;
+}
+
+/* Encabezado */
+header {
+    background-color: #acb2b6;
+    color: #1a83c4;
+    padding: 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header h1 {
+    margin: 0;
+    font-family: 'Bauhaus 93';
+    font-size: 80px;
+    letter-spacing: 2px;
+    font-style: normal;
+}
+
+/* Botones de la barra de navegación (secciones y lupa) */
+.selec button {
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+.auth-links a {
+    font-family: 'Arial Rounded MT'
+    color: #1a83c4;
+    font-size: 25px;
+    text-decoration: none;
+    margin: 0 1rem;
+}
+
+.auth-links a:hover {
+    text-decoration: underline;
+}
+
+#section {
+    height: 35px;
+    width: 35px;
+}
+
+/* Sección productos */
+h2 {
+    text-align: center;
+    color: #FFFFFF;
+    font-size: 2rem;
+    margin-bottom: 2rem;
+    font-family: "Baumans", system-ui;
+    font-weight: 400;
+    font-style: normal;
+}
+
+/* Contenedor de productos */
+div.producto {
+    border: 1px solid #3A3A3A;
+    padding: 20px;
+    background-color: #ffffff;
+    color: #2B004E;
+    margin: 1rem auto;
+    padding: 1rem;
+    text-align: center;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+/* Elementos individuales de productos */
+.producto div {
+    flex-basis: 30%;
+    margin-bottom: 1rem;
+}
+
+.producto img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+    transition: transform 0.3s ease;
+}
+
+.producto img:hover {
+    filter: saturate(200%);
+}
+
+/* Imágenes específicas de productos con dimensiones */
+.producto img {
+    height: 450px;
+    width: 360px;
+}
+
+/* Pie de página */
+footer {
+    background-color: #3C3A35;
+    color: #FFFFFF;
+    text-align: center;
+    padding: 1rem;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
+footer p {
+    margin: 0;
+}
+
+footer a {
+    color: #B3B3B3;
+}
+
+/* Otros estilos */
+#cerrar {
+    position: absolute;
+    height: 35px;
+    right: 10px;
+    top: 10px;
+}
+
+#busque {
+    position: absolute;
+    right: 55px;
+    top: 65px;
+    height: 35px;
+    width: 35px;
+}
+
+.salir {
+    float: left;
+}
+
+#cosas {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    overflow: hidden;
+    box-sizing: border-box;
+    width: 100%;
+}
+
+#hardware, #generos, #plataformas {
+    height: auto;
+    width: 150px;
+    text-align: center;
+}
+
+#cosas > * {
+    flex: 1;
+    margin: 0 10px;
+}
+
+#cosas h3 {
+    text-decoration: underline;
+}
+
+.produc-lincks {
+    text-decoration: none;
+    color: #FFF;
+    font-size: 24px;
+}
+
+.produc-lincks:hover {
+    color: slateblue;
+    text-decoration: underline;
+}
+
+#redes_e_info {
+    position: relative;
+    top: 12%;
+}
+
+/*Busqueda*/
+.lupa {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 5px;
+    background-color: #6a45837a;
+    width: fit-content;
+}
+
+.lupa input {
+    border: none;
+    outline: none;
+    padding: 5px;
+    font-size: 16px;
+    width: 200px;
+}
+
+.lupa button {
+    background: none;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+}
+
+.lupa img {
+    width: 20px;
+    height: 20px;
+    color: aqua;
+}
+
+/*Ventana*/
+.ventana {
+    background-color: rgba(0, 0, 0, 0.85);
+    height: 90%;
+    width: 90%;
+    color: #FFF;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 18px;
+    text-align: center;
+    padding: 36px;
+    min-height: 250px;
+    border-radius: 15px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    display: none;
+}
