@@ -1,0 +1,71 @@
+/* Carrusel */
+.carrusel {
+    display: flex;
+    max-width: 800px;
+    margin-left: 10px;
+    align-items: center;
+    overflow: hidden;
+    background: #312222;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.slide {
+    display: none;
+    width: 100%;
+}
+
+.slide img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+.active {
+    display: block;
+}
+
+.prev, .next {
+    background-color: transparent;
+    position: absolute;
+    top: 40%;
+    width: auto;
+    padding: 16px;
+    margin-top: -22px;
+    color: rgb(187, 187, 187);
+    font-weight: bold;
+    font-size: 18px;
+    cursor: pointer;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+}
+
+.next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+}
+
+.prev {
+    left: 547px; /* Coloca el botón "prev" a la izquierda */
+}
+
+.next {
+    right: 70px; /* Coloca el botón "next" a la derecha */
+}
+
+.prev:hover, .next:hover {
+    background-color: rgba(0,0,0,0.8);
+}
+
+/* Estilos para la ventana emergente */
+.ventana {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #fff;
+    padding: 1rem;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    z-index: 20; /* Asegúrate de que esté por delante de las flechas del carrusel */
+    border-radius: 10px;
+}
