@@ -12,6 +12,13 @@ body {
     align-items: center;
 }
 
+/*icons*/
+
+.icon-bars{
+    height: 100px;
+    color: #c52f4b;
+}
+
 .icon-cart {
     width: 24px;
     height: 24px;
@@ -46,7 +53,7 @@ header {
 header h1 {
     margin: 0;
     font-family: 'Bauhaus 93;
-    font-size: 100px;
+    font-size: 80px;
     letter-spacing: 2px;
     font-style: normal;
 }
