@@ -35,8 +35,8 @@ body {
 
 /* Encabezado */
 header {
-    background-color: #2B004E;
-    color: #FFFFFF;
+    background-color: #c8c332;
+    color: #1a83c4;
     padding: 1rem;
     display: flex;
     justify-content: space-between;
@@ -45,8 +45,9 @@ header {
 
 header h1 {
     margin: 0;
-    font-family: "Baumans", system-ui;
-    font-weight: 400;
+    font-family: 'Bauhaus 93;
+    font-size: 100px;
+    letter-spacing: 2px;
     font-style: normal;
 }
 
