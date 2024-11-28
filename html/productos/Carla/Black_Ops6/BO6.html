@@ -160,26 +160,61 @@
                 <button class="next" onclick="moverSlides(1)">&#10095;</button>
             </div>
             <h2>Black Ops 6</h2>
-            <form action="../../../carrito/carrito.html" method="post">
+            <form action="BO6.php" method="post">
                 <p>
                     Obligado a convertirse en solitario. Cazado desde el interior. Este es Call of Duty: Black Ops 6. 
                     Desarrollado por los galardonados equipos de Treyarch y Raven, Black Ops 6 es un thriller de acción 
                     y espionaje con una alucinante narrativa y libre de las reglas para entablar combate.
                 </p>
                 <h3>Precio: $1,599.00 MXN</h3>
-                <!-- Inputs ocultos para enviar datos al backend -->
                 <input type="hidden" name="producto" value="Black Ops 6">
                 <input type="hidden" name="precio" value="1599.00">
                 <button type="submit" class="add-to-cart">Agregar al Carrito</button>
             </form>
 
             <form action="BO6.php" method="post"> 
-                <button type="submit" class="pagar">Comprar Ahora</button> 
+                <a href="formulario.html"><button type="submit" class="pagar">Comprar Ahora</button> 
             </form>
         </div>
     </section>
 
     <footer><p>© 2024 Tienda de Videojuegos. Todos los derechos reservados.</p></footer>
+    <script>
+    let carrito = {};
+
+    document.addEventListener('DOMContentLoaded', () => {
+        if (localStorage.getItem('carrito')) {
+            carrito = JSON.parse(localStorage.getItem('carrito'));
+        }
+    });
+
+    document.querySelectorAll('.add-to-cart').forEach(button => {
+        button.addEventListener('click', event => {
+            event.preventDefault();
+
+            const producto = {
+                title: event.target.closest('form').querySelector('input[name="producto"]').value,
+                precio: parseFloat(event.target.closest('form').querySelector('input[name="precio"]').value),
+                id: event.target.closest('form').querySelector('input[name="producto"]').value,
+                cantidad: 1
+            };
+
+            // Si ya existe en el carrito, aumenta la cantidad
+            if (carrito.hasOwnProperty(producto.id)) {
+                producto.cantidad = carrito[producto.id].cantidad + 1;
+            }
+
+            carrito[producto.id] = { ...producto };
+
+            // Guardar en localStorage
+            localStorage.setItem('carrito', JSON.stringify(carrito));
+
+            alert(`¡${producto.title} agregado al carrito!`);
+        });
+    });
+</script>
+
+    <script src="script.js"></script>
     <script src="../../../../JavaScrip/script.js"></script>
     
 </body>
