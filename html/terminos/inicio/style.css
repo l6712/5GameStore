@@ -1,0 +1,118 @@
+body {
+    font-family: Arial, sans-serif;
+    background-image: url('img/fondo.webp');
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: #fff;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    position: relative;
+    z-index: 1;
+}
+
+body::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6); /* Ajustar el valor para hacer más opaco */
+    z-index: -1;
+}
+
+.logo{
+    height: 72px;
+    width: 72px;
+}
+
+.register-container {
+    background-color: rgba(43, 0, 78, 0.8);
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    width: 400px;
+    margin-right: 2rem;
+}
+h2 {
+    text-align: center;
+    font-size: 2rem;
+}
+form {
+    display: flex;
+    flex-direction: column;
+}
+label, input {
+    margin-bottom: 1.5rem;
+    font-size: 1.2rem;
+}
+input[type="text"], input[type="password"], input[type="email"] {
+    padding: 0.75rem;
+    border-radius: 5px;
+    border: none;
+    background-color: #3C3A35;
+    color: #FFFFFF;
+    font-size: 1.1rem;
+}
+button {
+    background-color: #008bff;
+    color: #fff;
+    border: none;
+    padding: 0.75rem 1.5rem;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1.2rem;
+}
+button:hover {
+    background-color: #0056b3;
+}
+.error {
+    color: #FF4C4C;
+    margin-bottom: 1.5rem;
+    font-size: 1.2rem;
+}
+.success {
+    color: #4CAF50;
+    margin-bottom: 1.5rem;
+    font-size: 1.2rem;
+}
+
+/* Encabezado */
+header {
+    background-color: #b49628ff;
+    color: #FFFFFF;
+    padding: 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 1.5rem;
+}
+
+/* Botones de la barra de navegación (secciones y lupa) */
+.selec button {
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+.auth-links a {
+    color: #fff;
+    text-decoration: none;
+    margin: 0 1rem;
+}
+
+.auth-links a:hover {
+    text-decoration: underline;
+}
+
+#section{
+    height: 35px;
+    width: 35px;
+}
