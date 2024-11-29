@@ -95,7 +95,40 @@ h2 {
 }
 
 /*section juegos populares */
-
+.div-productos{
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	gap: 10%;
+}
+.div-producto-info{
+	padding: 0 2%;
+}
+.producto{
+	font-family: Dubai;
+	color: #e89e00;
+	font-size: 20px;
+	text-align: center;
+	width: 100%;
+	background-color: #5e4dd3;
+	border-radius: 25px;
+}
+.producto a{
+	text-decoration: none;
+	color: #fba71d;
+}
+.producto:hover{
+	box-shadow: 0 10px 20px rgba(0, 0, 0, 0.8);
+}
+.img-producto-index{
+	border-radius: 15px;
+	display: block;
+}
+.producto img{
+	width: 100%;
+	position: relative;
+	display: flex;
+	overflow: hidden;
+}
 
 /* Pie de página */
 footer {
