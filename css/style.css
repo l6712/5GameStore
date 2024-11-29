@@ -103,7 +103,7 @@ h2 {
 .div-productos{
 	display: grid;
 	grid-template-columns: repeat(3, 1fr);
-	gap: 10%;
+	gap: 9%;
 }
 .div-productos > div:last-child{
 	margin-right: 0;
