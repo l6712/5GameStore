@@ -154,22 +154,57 @@
                 <button class="next" onclick="moverSlides(1)">&#10095;</button>
             </div>
             <h2>Borderlands 3</h2>
-            <p>¡Vuelve el padre de los shooter-looter con miles de armas y una nueva aventura caótica! Ábrete paso por nuevos mundos y enemigos con uno de los cuatro buscacámaras nuevos, cada uno con su profuso árbol de habilidades y opciones de personalización.
-<br> Desarrollado por Gearbox Software
-Editor: 2K
-            </p>
-            <h3>Precio: $ 899.00 Mex
-            </h3>
-            <button class="add-to-cart" data-id="2" data-title="Black Ops 6" data-price="899.00">Agregar al Carrito</button> 
-            </div>
-            
+            <form action="../../../pagar/pagos.html" method="post">
+                <p>
+                   ¡Vuelve el padre de los shooter-looter con miles de armas y una nueva aventura caótica! Ábrete paso por nuevos mundos y enemigos con uno de los cuatro buscacámaras nuevos, cada uno con su profuso árbol de habilidades y opciones de personalización.
+                </p>
+                <h3>Precio: $899.00 MXN</h3>
+                <input type="hidden" name="producto" value="Borderlands 3">
+                <input type="hidden" name="precio" value="899.00">
+                <button type="submit" class="add-to-cart">Agregar al Carrito</button>
+            </form>
+            <a href="../../../pagar/pagos.html"><button type="submit" class="pagar">Comprar Ahora</button> 
         </div>
     </section>
 
     <footer><p>© 2024 Tienda de Videojuegos. Todos los derechos reservados.</p></footer>
+    <script>
+    let carrito = {};
+
+    document.addEventListener('DOMContentLoaded', () => {
+        if (localStorage.getItem('carrito')) {
+            carrito = JSON.parse(localStorage.getItem('carrito'));
+        }
+    });
+
+    document.querySelectorAll('.add-to-cart').forEach(button => {
+        button.addEventListener('click', event => {
+            event.preventDefault();
+
+            const producto = {
+                title: event.target.closest('form').querySelector('input[name="producto"]').value,
+                precio: parseFloat(event.target.closest('form').querySelector('input[name="precio"]').value),
+                id: event.target.closest('form').querySelector('input[name="producto"]').value,
+                cantidad: 1
+            };
+
+            // Si ya existe en el carrito, aumenta la cantidad
+            if (carrito.hasOwnProperty(producto.id)) {
+                producto.cantidad = carrito[producto.id].cantidad + 1;
+            }
+
+            carrito[producto.id] = { ...producto };
+
+            // Guardar en localStorage
+            localStorage.setItem('carrito', JSON.stringify(carrito));
+
+            alert(`¡${producto.title} agregado al carrito!`);
+        });
+    });
+</script>
 
     <script src="script.js"></script>
-    <script src="../../../JavaScrip/script.js"></script>
+    <script src="../../../../JavaScrip/script.js"></script>
     
 </body>
 </html>
