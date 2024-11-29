@@ -1,241 +1,271 @@
-/* Estilos Globales */
-* {
+body {
+    font-family: 'Arial Rounded MT';
+    background-color: #c8c3327c;
+    color: #FFFFFF;
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
-    font-family: 'Baumans', sans-serif;
+}
+html, body{
+	overflow-x: hidden;
+	margin: 0;
+	padding: 0;
 }
 
-body {
-    background-color: #f4f4f4;
-    color: #333;
-    line-height: 1.6;
+/*Carrito*/
+.container-icon {
+    display: flex;
+    align-items: center;
 }
 
-h1, h2, h3, h4 {
-    font-family: 'Baumans', sans-serif;
+/*icons*/
+
+.icon-bars{
+    height: 90px;
+    color: #c52f4b;
+    cursor: pointer;
 }
 
-/* Header */
-header {
-    background-color: #212121;
+.icon-cart {
+    height: 90px;
+    color: #c52f4b;
+    cursor: pointer;
+}
+
+/* Botones principales */
+.producto button {
+    background-color: #008bff;
     color: #fff;
-    padding: 15px 0;
-    text-align: center;
-    position: relative;
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 0.5rem;
+}
+
+.producto button:hover {
+    background-color: #0056b3;
+}
+
+/* Encabezado */
+header {
+    background-color: rgba(111, 167, 162, 0.466);
+    color: #1a83c4;
+    padding: 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
 header h1 {
-    font-size: 2.5rem;
-    font-weight: normal;
-    margin-bottom: 10px;
+    margin: 0;
+    font-family: 'Bauhaus 93';
+    font-size: 70px;
+    letter-spacing: 2px;
+    font-style: normal;
 }
 
-header .selec button {
-    background-color: transparent;
+/* Botones de la barra de navegación (secciones y lupa) */
+.selec button {
+    background: none;
     border: none;
-    position: absolute;
-    top: 20px;
-    left: 15px;
     cursor: pointer;
 }
 
-header .selec svg {
-    width: 30px;
-    height: 30px;
-    stroke: #fff;
-}
-
-header .auth-links {
-    margin-top: 10px;
-}
-
-header .auth-links a {
-    color: #fff;
+.auth-links a {
+    font-family: 'Arial Rounded MT';
+    color: #1a83c4;
+    font-size: 25px;
     text-decoration: none;
-    margin: 0 10px;
+    margin: 0 1rem;
 }
 
-header .container-icon {
-    position: absolute;
-    top: 20px;
-    right: 20px;
-}
-
-header .icon-cart {
-    width: 30px;
-    height: 30px;
-    stroke: #fff;
-    cursor: pointer;
-}
-
-/* Ventana Emergente */
-.ventana {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    background-color: rgba(0, 0, 0, 0.5);
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-}
-
-.ventana div {
-    background-color: #fff;
-    padding: 20px;
-    border-radius: 8px;
-    max-width: 400px;
-    width: 100%;
-    text-align: center;
-}
-
-.ventana .salir img {
-    width: 30px;
-    height: 30px;
-}
-
-.ventana h1 {
-    font-size: 2rem;
-    margin-bottom: 20px;
-}
-
-.ventana .lupa input {
-    width: 100%;
-    padding: 8px;
-    margin: 10px 0;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-}
-
-/* Sección de Productos */
-.espacio-juegos {
-    padding: 40px 0;
-    text-align: center;
-    background-color: #fff;
-}
-
-.espacio-juegos h2 {
-    font-size: 2.5rem;
-    color: #212121;
-    margin-bottom: 20px;
-}
-
-/* Productos */
-.section-productos {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 20px;
-    justify-content: center;
-    padding: 20px;
-    background-color: #f4f4f4;
-}
-
-.div-productos {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
-    gap: 20px;
-    width: 100%;
-}
-
-.producto {
-    background-color: #fff;
-    border-radius: 8px;
-    overflow: hidden;
-    text-align: center;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-}
-
-.producto figure {
-    margin-bottom: 10px;
-}
-
-.producto img {
-    width: 100%;
-    height: 200px;
-    object-fit: cover;
-}
-
-.producto h3 {
-    font-size: 1.2rem;
-    margin: 10px 0;
-}
-
-.producto a {
-    text-decoration: none;
-    color: inherit;
-}
-
-.producto:hover {
-    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
-    transform: translateY(-5px);
-}
-
-/* Footer */
-footer {
-    background-color: #212121;
-    color: #fff;
-    padding: 40px 20px;
-    text-align: center;
-}
-
-footer p {
-    margin-bottom: 10px;
-}
-
-footer .conocenos,
-footer .contacto {
-    margin: 20px 0;
-}
-
-footer .conocenos h4,
-footer .contacto h4 {
-    font-size: 1.5rem;
-    margin-bottom: 10px;
-}
-
-footer .conocenos a,
-footer .contacto p {
-    font-size: 1rem;
-    color: #fff;
-}
-
-footer .conocenos a:hover {
-    color: #f39c12;
+.auth-links a:hover {
     text-decoration: underline;
 }
 
-/* Responsive */
-@media (max-width: 768px) {
-    header h1 {
-        font-size: 2rem;
-    }
-
-    .section-productos {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .div-productos {
-        grid-template-columns: 1fr 1fr;
-    }
+/* Sección productos */
+h2 {
+    text-align: center;
+    color: #c52f4b;
+    margin-bottom: 2rem;
+    font-family: 'Bauhaus 93';
+    letter-spacing: 2px;
+    font-size: 70px;
+    font-style: normal;
 }
 
-@media (max-width: 480px) {
-    header h1 {
-        font-size: 1.5rem;
-    }
+/*section juegos populares */
+.div-productos{
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	gap: 9%;
+}
+.div-productos > div:last-child{
+	margin-right: 0;
+}
+.div-producto-info{
+	padding: 0 2%;
+}
+.producto{
+	font-family: 'Arial Rounded MT';
+	color: #e89e00;
+	font-size: 20px;
+	text-align: center;
+	width: 100%;
+	background-color: #5f4dd3a9;
+	border-radius: 25px;
+}
+.producto a{
+	text-decoration: none;
+	color: #fba71d;
+}
+.producto:hover{
+	box-shadow: 0 10px 20px rgba(0, 0, 0, 0.8);
+}
+.img-producto-index{
+	border-radius: 15px;
+	display: block;
+}
+.producto img{
+	width: 100%;
+	height: 350px;
+	position: relative;
+	display: block;
+    object-fit: cover;
+	overflow: hidden;
+}
 
-    .section-productos {
-        flex-direction: column;
-    }
+.espacio-section-footer{
+	width: 100%;
+	height: 1100px;
+}
+/* Pie de página */
+footer {
+    background-color: #3C3A35;
+    color: #FFFFFF;
+    text-align: center;
+    padding: 1rem;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
 
-    .div-productos {
-        grid-template-columns: 1fr;
-    }
+footer p {
+    margin: 0;
+}
 
-    .producto img {
-        height: 150px;
-    }
+footer a {
+    color: #B3B3B3;
+}
+
+/* Otros estilos */
+#cerrar {
+    position: absolute;
+    height: 35px;
+    right: 10px;
+    top: 10px;
+}
+
+#busque {
+    position: absolute;
+    right: 55px;
+    top: 65px;
+    height: 35px;
+    width: 35px;
+}
+
+.salir {
+    float: left;
+}
+
+#cosas {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    overflow: hidden;
+    box-sizing: border-box;
+    width: 100%;
+}
+
+#hardware, #generos, #plataformas {
+    height: auto;
+    width: 150px;
+    text-align: center;
+}
+
+#cosas > * {
+    flex: 1;
+    margin: 0 10px;
+}
+
+#cosas h3 {
+    text-decoration: underline;
+}
+
+.produc-lincks {
+    text-decoration: none;
+    color: #FFF;
+    font-size: 24px;
+}
+
+.produc-lincks:hover {
+    color: slateblue;
+    text-decoration: underline;
+}
+
+#redes_e_info {
+    position: relative;
+    top: 12%;
+}
+
+/*Busqueda*/
+.lupa {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 5px;
+    background-color: #6a45837a;
+    width: fit-content;
+}
+
+.lupa input {
+    border: none;
+    outline: none;
+    padding: 5px;
+    font-size: 16px;
+    width: 200px;
+}
+
+.lupa button {
+    background: none;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+}
+
+.lupa img {
+    width: 20px;
+    height: 20px;
+    color: aqua;
+}
+
+/*Ventana*/
+.ventana {
+    background-color: rgba(0, 0, 0, 0.85);
+    width: 70%;
+    color: #FFF;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 18px;
+    text-align: center;
+    padding: 36px;
+    min-height: 250px;
+    border-radius: 15px;
+    position: fixed; /* Cambiado a fixed */
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    display: none;
+    z-index: 1000; /* Asegura que la ventana esté por encima de otros elementos */
 }
