@@ -3,9 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../../css/style.css">
-    <link rel="stylesheet" href="../../css/carrucel.css">
-    <link rel="stylesheet" href="../../css/menu.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="carrucel.css">
+    <link rel="stylesheet" href="menu.css">
     <title>Elden Ring</title>
 </head>
 
@@ -121,7 +121,7 @@
 
     <section>
         <div class="producto">
-            <img src="../../../../img/portadas/2.jpg">
+            <img src="../../../img/2.jpg">
                 
             <div class="carrusel"> 
                 <div class="slide active"> 
@@ -151,6 +151,7 @@
                 <button class="prev" onclick="moverSlides(-1)">&#10094;</button> 
                 <button class="next" onclick="moverSlides(1)">&#10095;</button>
             </div>
+            <form action="../../../pagar/pagos.html" method="post">
             <h2>Elden Ring</h2>
             <p>EL NUEVO RPG DE ACCIÓN DE FANTASÍA.<br> Levántate, tiznado, y déjate guiar por la gracia para esgrimir el poder del Anillo de Elden y convertirte en un Señor de Elden en las Tierras Intermedias.<br>
                     - Un extenso mundo lleno de emoción <br>
@@ -158,15 +159,18 @@
                     - Un drama épico nacido de un mito<br>
             </p>
             <h3>Precio: $ 819.00  Mex</h3>
-            <button class="add-to-cart" data-id="3" data-title="Elden Ring" data-price="819">Agregar al Carrito</button> 
-            </div>
+            <input type="hidden" name="producto" value="Black Ops 6">
+                <input type="hidden" name="precio" value="1599.00">
+                <button type="submit" class="add-to-cart">Agregar al Carrito</button>
+            </form>
+            <a href="../../../pagar/pagos.html"><button type="submit" class="pagar">Comprar Ahora</button> 
             
         </div>
     </section>
 
     <footer><p>© 2024 Tienda de Videojuegos. Todos los derechos reservados.</p></footer>
 
-    <script src="../../../../JavaScrip/script.js"></script>
+    <script src="../../../script.js"></script>
     
 </body>
 </html>
