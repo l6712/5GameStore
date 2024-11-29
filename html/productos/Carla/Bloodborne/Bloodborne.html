@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+ <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -153,12 +153,17 @@
                 <button class="prev" onclick="moverSlides(-1)">&#10094;</button> 
                 <button class="next" onclick="moverSlides(1)">&#10095;</button>
             </div>
-            <h2>Black Ops 6</h2>
-            <p>Obligado a convertirse en solitario. Cazado desde el interior. Este es Call of Duty: Black Ops 6. Desarrollado por los galardonados equipos de Treyarch y Raven, Black Ops 6 es un thriller de acción y espionaje con una alucinante narrativa y libre de las reglas para entablar combate. Esta es una campaña cinematográfica de un solo jugador emblemática de Black Ops, una experiencia multijugador de primera calidad y el regreso épico de zombis en ronda.</p>
-            <h3>Precio: $1,599.00 Mex</h3>
-            <button class="add-to-cart" data-id="2" data-title="Black Ops 6" data-price="1599">Agregar al Carrito</button> 
-            </div>
-            
+            <h2>Bloodborne</h2>
+            <form action="../../../pagar/pagos.html" method="post">
+                <p>
+                    Enfrenta tus pesadillas mientras buscas respuestas en la antigua ciudad de Yharnam, ahora maldecida por una enfermedad endémica que se propaga por las calles como un fuego arrasador. El peligro, la muerte y la locura merodean en cada esquina de este mundo oscuro y espantoso, y debes descubrir sus secretos más oscuros para poder sobrevivir.
+                </p>
+                <h3>Precio: $386.93 MXN</h3>
+                <input type="hidden" name="producto" value="Bloodborne">
+                <input type="hidden" name="precio" value="386.93">
+                <button type="submit" class="add-to-cart">Agregar al Carrito</button>
+            </form>
+            <a href="../../../pagar/pagos.html"><button type="submit" class="pagar">Comprar Ahora</button> 
         </div>
     </section>
 
