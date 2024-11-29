@@ -20,13 +20,13 @@ html, body{
 /*icons*/
 
 .icon-bars{
-    height: 100px;
+    height: 90px;
     color: #c52f4b;
     cursor: pointer;
 }
 
 .icon-cart {
-    height: 100px;
+    height: 90px;
     color: #c52f4b;
     cursor: pointer;
 }
@@ -59,7 +59,7 @@ header {
 header h1 {
     margin: 0;
     font-family: 'Bauhaus 93';
-    font-size: 80px;
+    font-size: 70px;
     letter-spacing: 2px;
     font-style: normal;
 }
@@ -74,7 +74,7 @@ header h1 {
 .auth-links a {
     font-family: 'Arial Rounded MT';
     color: #1a83c4;
-    font-size: 25px;
+    font-size: 20px;
     text-decoration: none;
     margin: 0 1rem;
 }
