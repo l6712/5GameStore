@@ -154,23 +154,57 @@
                 <button class="next" onclick="moverSlides(1)">&#10095;</button>
             </div>
             <h2>Borderlands 2</h2>
-            <p>Una nueva era de disparos y saqueos está a punto de comenzar. Juega como uno de los cuatro nuevos cazadores de bóvedas que se enfrentan a un nuevo mundo masivo de criaturas, psicópatas y el malvado cerebro, Handsome Jack. Haz nuevos amigos, ármalos con un montón de armas y lucha junto a ellos en el modo cooperativo de 4 jugadores en una búsqueda implacable de venganza y redención en el planeta viviente impredecible y desconocido.
-<br> Desarrollado por Gearbox Software, Aspyr (Mac), Aspyr (Linux)
-Editor: 2K, Aspyr (Mac), Aspyr (Linux)
-
-            </p>
-            <h3>Precio: $ 179.99 Mex
-            </h3>
-            <button class="add-to-cart" data-id="2" data-title="Black Ops 6" data-price="179.99">Agregar al Carrito</button> 
-            </div>
-            
+            <form action="../../../pagar/pagos.html" method="post">
+                <p>
+                    Una nueva era de disparos y saqueos está a punto de comenzar. Juega como uno de los cuatro nuevos cazadores de bóvedas que se enfrentan a un nuevo mundo masivo de criaturas, psicópatas y el malvado cerebro, Handsome Jack. Haz nuevos amigos, ármalos con un montón de armas y lucha junto a ellos en el modo cooperativo de 4 jugadores en una búsqueda implacable de venganza y redención en el planeta viviente impredecible y desconocido.
+                </p>
+                <h3>Precio: $179.99 MXN</h3>
+                <input type="hidden" name="producto" value="Borderlands 2">
+                <input type="hidden" name="precio" value="179.99">
+                <button type="submit" class="add-to-cart">Agregar al Carrito</button>
+            </form>
+            <a href="../../../pagar/pagos.html"><button type="submit" class="pagar">Comprar Ahora</button> 
         </div>
     </section>
 
     <footer><p>© 2024 Tienda de Videojuegos. Todos los derechos reservados.</p></footer>
+    <script>
+    let carrito = {};
+
+    document.addEventListener('DOMContentLoaded', () => {
+        if (localStorage.getItem('carrito')) {
+            carrito = JSON.parse(localStorage.getItem('carrito'));
+        }
+    });
+
+    document.querySelectorAll('.add-to-cart').forEach(button => {
+        button.addEventListener('click', event => {
+            event.preventDefault();
+
+            const producto = {
+                title: event.target.closest('form').querySelector('input[name="producto"]').value,
+                precio: parseFloat(event.target.closest('form').querySelector('input[name="precio"]').value),
+                id: event.target.closest('form').querySelector('input[name="producto"]').value,
+                cantidad: 1
+            };
+
+            // Si ya existe en el carrito, aumenta la cantidad
+            if (carrito.hasOwnProperty(producto.id)) {
+                producto.cantidad = carrito[producto.id].cantidad + 1;
+            }
+
+            carrito[producto.id] = { ...producto };
+
+            // Guardar en localStorage
+            localStorage.setItem('carrito', JSON.stringify(carrito));
+
+            alert(`¡${producto.title} agregado al carrito!`);
+        });
+    });
+</script>
 
     <script src="script.js"></script>
-    <script src="../../../JavaScrip/script.js"></script>
+    <script src="../../../../JavaScrip/script.js"></script>
     
 </body>
 </html>
