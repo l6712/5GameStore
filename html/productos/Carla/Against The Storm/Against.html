@@ -156,7 +156,10 @@
             <h2>Against the Storm</h2>
             <p>Crea ciudades en un mundo de fantasía oscura. Reconstruye una civilización azotada por lluvias apocalípticas. Sirve a la Reina, lidera humanos, castores, lagartos, zorros y harpías para reconquistar la naturaleza y dar un futuro a los últimos supervivientes de la civilización.</p>
             <h3>Precio: Mex$ 399.99</h3>
-            <button type="submit" class="add-to-cart">Agregar al Carrito</button>
+              <!-- Inputs ocultos para enviar datos al backend -->
+                <input type="hidden" name="producto" value="Against the storm">
+                <input type="hidden" name="precio" value="399.99">
+               <button type="submit" class="add-to-cart">Agregar al Carrito</button>
             </form>
 
             <form action="../../../pagar/pagos.html" method="post"> 
