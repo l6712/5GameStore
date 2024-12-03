@@ -34,7 +34,7 @@
 .prev, .next {
     background-color: transparent;
     position: absolute;
-    top: 40%;
+    top: auto;
     width: auto;
     padding: 16px;
     margin-top: -22px;
@@ -52,11 +52,11 @@
 }
 
 .prev {
-    left: 547px; /* Coloca el botón "prev" a la izquierda */
+    left: 427px; /* Coloca el botón "prev" a la izquierda */
 }
 
 .next {
-    right: 70px; /* Coloca el botón "next" a la derecha */
+    right: 30px; /* Coloca el botón "next" a la derecha */
 }
 
 .prev:hover, .next:hover {
