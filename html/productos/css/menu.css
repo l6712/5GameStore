@@ -39,12 +39,21 @@
 
 #cosas h3{
     text-decoration: underline;
+    font-size: 55px;
+    font-family: 'Bauhaus 93';
+    letter-spacing: 2px;
+}
+h1{
+    font-size: 55px;
+    font-family: 'Bauhaus 93';
+    letter-spacing: 2px;
+    margin: 0;
 }
 
 .produc-lincks{
     text-decoration: none;
     color: #FFF;
-    font-size: 24px;
+    font-size: 23px;
 }
 .produc-lincks:hover{
     color: slateblue;
@@ -54,6 +63,7 @@
 #redes_e_info {
     position: relative;
     top: 12%;
+    color: #0090d3;
 }
 
 /*Busqueda*/
@@ -64,7 +74,7 @@
     border: 1px solid #ccc;
     border-radius: 5px;
     padding: 5px;
-    background-color: #6a45837a;
+    background-color: #0090d3;
     width: fit-content;
 }
 
@@ -88,13 +98,15 @@
     height: 20px;
 }
 
+
+
 /*Ventana*/
 .ventana {
     background-color: rgba(0, 0, 0, 0.85);
     height: 90%;
     width: 90%;
     color: #FFF;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: 'Arial Rounded MT';
     font-size: 18px;
     text-align: center;
     padding: 36px;
