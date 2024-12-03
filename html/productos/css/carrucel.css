@@ -52,11 +52,11 @@
 }
 
 .prev {
-    left: 427px; /* Coloca el botón "prev" a la izquierda */
+    left: 437px; /* Coloca el botón "prev" a la izquierda */
 }
 
 .next {
-    right: 30px; /* Coloca el botón "next" a la derecha */
+    right: 35px; /* Coloca el botón "next" a la derecha */
 }
 
 .prev:hover, .next:hover {
