@@ -42,7 +42,7 @@ document.getElementById("loginForm").addEventListener("submit", function(event) 
 
 //------------------------------------------------------------------
 
-    document.getElementById('search-bar').addEventListener('input', function() {
+    document.getElementById('busqueda').addEventListener('input', function() {
         var searchQuery = this.value.toLowerCase();
         var products = document.querySelectorAll('.producto');
 
