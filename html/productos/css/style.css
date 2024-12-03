@@ -1,8 +1,6 @@
 body {
-    font-family: Arial, sans-serif;
-    background-image: url('img/fondo.jpg');
-    background-repeat: no-repeat;
-    background-size: cover;
+    font-family: 'Arial Rounded MT';
+    background-color: #c8c3327c;
     margin: 0;
     padding: 0;
 }
@@ -18,33 +16,40 @@ html, body{
     align-items: center;
 }
 
+.icon-bars{
+    height: 90px;
+    color: #c52f4b;
+    cursor: pointer;
+}
+
 .icon-cart {
-    width: 24px;
-    height: 24px;
+    height: 90px;
+    color: #c52f4b;
     cursor: pointer;
 }
 
 /* Botones principales */
 .add-to-cart, .pagar {
     background-color: #008bff;
-    font-size: 20px;
-    color: #fff;
+    font-size: 40px;
+    color: #373737;
+    font-weight: 700;
     border: none;
     padding: 0.5rem 1rem;
-    border-radius: 5px;
+    border-radius: 8px;
     cursor: pointer;
-    margin-top: 0.5rem;
 }
 
-.add-to-cart:hover {
+.add-to-cart:hover, .pagar:hover{
     background-color: #0056b3;
+    color: #c52f4b;
 }
 
 
 /* Encabezado */
 header {
-    background-color: #b49628ff;
-    color: #FFFFFF;
+    background-color: rgba(111, 167, 162, 0.466);
+    color: #1a83c4;
     padding: 1rem;
     display: flex;
     justify-content: space-between;
@@ -53,7 +58,10 @@ header {
 
 header h1 {
     margin: 0;
-    font-size: 1.5rem;
+    font-family: 'Bauhaus 93';
+    font-size: 70px;
+    letter-spacing: 2px;
+    font-style: normal;
 }
 
 /* Botones de la barra de navegación (secciones y lupa) */
@@ -63,11 +71,16 @@ header h1 {
     cursor: pointer;
 }
 
-
 .auth-links a {
-    color: #fff;
+    font-family: 'Arial Rounded MT';
+    color: #1a83c4;
+    font-size: 25px;
     text-decoration: none;
     margin: 0 1rem;
+}
+
+.auth-links a:hover {
+    text-decoration: underline;
 }
 
 .auth-links a:hover {
@@ -82,7 +95,6 @@ header h1 {
 /* Contenedor de productos */
 div.producto {
     padding: 20px;
-    background-color: #00000091;
     color: #2B004E;
     margin: 1rem auto;
     padding: 1rem;
@@ -100,9 +112,6 @@ div.producto {
     transition: transform 0.3s ease;
 }
 
-.producto img:hover, video:hover {
-    filter: saturate(200%);
-}
 
 /* Imágenes específicas de productos con dimensiones */
 .producto img{
@@ -112,25 +121,78 @@ div.producto {
 }
 
 /*Texto Producto*/
-
-h2{
-    color: #7f53e8ff;
-    font-size: 40px;
+.informacion-producto{
+    background-color: rgba(111, 167, 162, 0.466);
+    padding: 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 10px;
+    width: 55%;
+    margin: 0 auto;
 }
 
-p{
+.div-informacion-producto{
+    margin: 1rem auto;
+    padding: 1rem;
+    text-align: center;
+    display: flex;
+    justify-content: space-around;
+}
+
+.precio-producto{
+    background-color: #e3e3e3;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 10px;
+    width: 45%;
+    margin: 0 auto;
+    flex-direction: column;
+}
+
+.input{
+    margin-top: 0;
+}
+
+input{
+    font-family: 'Arial Rounded MT';
+}
+
+section button{
+    margin-bottom: 20px;
+    width: 400px;
+}
+
+h2 {
+    text-align: center;
+    color: #c52f4b;
+    margin-bottom: 2rem;
+    font-family: 'Bauhaus 93';
+    letter-spacing: 2px;
+    font-size: 70px;
+    font-style: normal;
+    margin-top: 0;
+    line-height: 0.8;
+}
+
+section p{
     font-size: 25px;
-    color: #ffffff;
+    line-height: 1.2;
+    color: #373737;
 }
 
 h3{
-    color: #0056b3;
-    font-size: 30px;
+    color: #1a83c4;
+    font-size: 55px;
+    margin: 10px;
 }
 
 /* Pie de página */
 footer {
-    background-color: #3b3a35;
+    background-color: #3C3A35;
+    color: #FFFFFF;
     text-align: center;
     padding: 1rem;
     position: relative;
@@ -138,6 +200,29 @@ footer {
     width: 100%;
 }
 
+h5{
+    font-size: 25px;
+    margin: 10px;
+    color: #FFFFFF;
+}
+
 footer p {
-    color: #fff5fc;
-}   
+    margin: 0;
+    font-family: Consolas;
+    line-height: 1.2;
+    color: #4e4e4e;
+    font-size: 20px;
+}
+
+.footer-acerca{
+    margin: 0;
+    font-family: Consolas;
+    line-height: 1.2;
+    color: #d8d8d8;
+    font-size: 20px;
+    text-decoration: none;
+}
+
+footer a {
+    color: #4e4e4e;
+}
