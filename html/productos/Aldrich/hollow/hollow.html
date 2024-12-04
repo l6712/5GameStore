@@ -123,7 +123,7 @@
 
     <section>
         <div class="producto">
-            <img src="../../../img/portadas/3.jpg" alt="">
+            <img src="img/OIP.jpg" alt="">
 
             <div class="carrusel"> 
                 <div class="slide active"> 
@@ -152,18 +152,55 @@
                 <button class="next" onclick="moverSlides(1)">&#10095;</button>
             </div>
             <h2>Hollow Knight</h2>
-            <form action="../añadir_prod.php" method="post"></form>
+            <form action="../../../pagar/pagos.html" method="post">
                 <p>¡Forja tu propio camino en Hollow Knight! Una aventura de acción épica a través de un vasto reino en ruinas de insectos y héroes. Explora cavernas retorcidas, lucha contra criaturas contaminadas y hazte amigo de bichos extraños, todo en un estilo 2D clásico dibujado a mano.
                 </p>
                 <h3>Precio: $178.99 Mex</h3>
-                <button class="add-to-cart" data-id="2" data-title="Hollow Knight" data-price="178.99">Agregar al Carrito</button>
-                <button type="submit" class="pagar">Comprar Ahora</button>
+                <input type="hidden" name="producto" value="Hollow Knight">
+                <input type="hidden" name="precio" value="178.99">
+                <button type="submit" class="add-to-cart">Agregar al Carrito</button>
             </form>
+            <a href="../../../pagar/pagos.html"><button type="submit" class="pagar">Comprar Ahora</button> 
         </div>
     </section>
 
     <footer><p>© 2024 Tienda de Videojuegos. Todos los derechos reservados.</p></footer>
+    <script>
+    let carrito = {};
 
+    document.addEventListener('DOMContentLoaded', () => {
+        if (localStorage.getItem('carrito')) {
+            carrito = JSON.parse(localStorage.getItem('carrito'));
+        }
+    });
+
+    document.querySelectorAll('.add-to-cart').forEach(button => {
+        button.addEventListener('click', event => {
+            event.preventDefault();
+
+            const producto = {
+                title: event.target.closest('form').querySelector('input[name="producto"]').value,
+                precio: parseFloat(event.target.closest('form').querySelector('input[name="precio"]').value),
+                id: event.target.closest('form').querySelector('input[name="producto"]').value,
+                cantidad: 1
+            };
+
+            // Si ya existe en el carrito, aumenta la cantidad
+            if (carrito.hasOwnProperty(producto.id)) {
+                producto.cantidad = carrito[producto.id].cantidad + 1;
+            }
+
+            carrito[producto.id] = { ...producto };
+
+            // Guardar en localStorage
+            localStorage.setItem('carrito', JSON.stringify(carrito));
+
+            alert(`¡${producto.title} agregado al carrito!`);
+        });
+    });
+</script>
+
+    <script src="script.js"></script>
     <script src="../../../../JavaScrip/script.js"></script>
     
 </body>
