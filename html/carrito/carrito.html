@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carrito de Compras de Juegos</title>
+    <link rel="stylesheet" href="../../css/style.css">
+    <link rel="stylesheet" href="../../css/menu.css">
+    <link rel="icon" type="image/png" href="../../5GAME STORE_files/logo-5gamestore.png">
+</head>
+<body>
+    <div class="ventana" id="vent" style="display: none;">
+        <div>
+            <div class="salir"><a href="../../index.html"><img src="../../5GAME STORE_files/inicio.png" alt="Inicio"></a></div>
+            <h1>SECCIONES</h1>
+            <a href="javascript:cerrar()">
+                <img src="../../5GAME STORE_files/error.png" alt="Cerrar ventana" id="cerrar">
+            </a>
+            <div class="lupa">
+                <img src="../../5GAME STORE_files/busqueda.png" id="busque" alt="Icono búsqueda">
+            </div>
+        </div>
+        <div id="cosas">
+            <div id="hardware">
+                <h3>HARDWARE</h3>
+                <div class="Contenido">
+                    <ul>
+                        <li><a href="#" class="produc-lincks">PC y Portátiles</a></li>
+                        <li><a href="#" class="produc-lincks">Monitores</a></li>
+                        <li><a href="#" class="produc-lincks">Periféricos</a></li>
+                        <li><a href="#" class="produc-lincks">Tarjetas gráficas</a></li>
+                        <li><a href="#" class="produc-lincks">Auriculares y altavoces</a></li>
+                        <li><a href="#" class="produc-lincks">Mandos y Joystick</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div id="generos">
+                <h3>GÉNEROS</h3>
+                <div class="Contenido">
+                    <ul>
+                        <li><a href="../categorias/RPG.html" class="produc-lincks">RPG</a></li>
+                        <li><a href="../categorias/deportes.html" class="produc-lincks">Deportes</a></li>
+                        <li><a href="../categorias/coches.html" class="produc-lincks">Coches</a></li>
+                        <li><a href="../categorias/accion.html" class="produc-lincks">Acción</a></li>
+                        <li><a href="../categorias/estrategia.html" class="produc-lincks">Estrategia</a></li>
+                        <li><a href="../categorias/simulacion.html" class="produc-lincks">Simulación</a></li>
+                        <li><a href="../categorias/mmo.html" class="produc-lincks">MMO</a></li>
+                        <li><a href="../categorias/battleRoyale.html" class="produc-lincks">Battle Royale</a></li>
+                        <li><a href="../categorias/educativo.html" class="produc-lincks">Educativo</a></li>
+                        <li><a href="../categorias/plataformas.html" class="produc-lincks">Plataformas</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div id="plataformas">
+                <h3>PLATAFORMAS</h3>
+                <div class="Contenido">
+                    <ul>
+                        <li><a href="#" class="produc-lincks">PC</a></li>
+                        <li><a href="#" class="produc-lincks">PS4</a></li>
+                        <li><a href="#" class="produc-lincks">PS5</a></li>
+                        <li><a href="#" class="produc-lincks">Xbox</a></li>
+                        <li><a href="#" class="produc-lincks">Xbox One</a></li>
+                        <li><a href="#" class="produc-lincks">Nintendo Switch</a></li>
+                        <li><a href="#" class="produc-lincks">Android</a></li>
+                        <li><a href="#" class="produc-lincks">iOS</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div id="redes_e_info">
+            <div class="l_1">
+                <a href="#"><img src="../../5GAME STORE_files/x.png" alt="X"></a>
+                <a href="#"><img src="../../5GAME STORE_files/instagram.png" alt="instagram"></a>
+                <a href="#"><img src="../../5GAME STORE_files/twitch.png" alt="twitch"></a>
+                <a href="#"><img src="../../5GAME STORE_files/youtube.png" alt="youtube"></a>
+                <a href="#"><img src="../../5GAME STORE_files/telegrama.png" alt="telegrama"></a>
+            </div>
+            <div class="l_2">
+                <a href="html/Vent_flot/aviso.html">Aviso Legal</a>
+                <a href="html/Vent_flot/condiciones.html">Condiciones de uso</a>
+                <a href="html/Vent_flot/politicas_cook.html">Política de cookies</a>
+                <a href="html/terminos/terminos.html">Términos y Condiciones</a>
+            </div>
+        </div>
+    </div>
+
+    <header>
+        <div class="selec">
+            <button type="button" onclick="abrir()">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="icon-bars">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+                </svg>
+            </button>
+        </div>
+        <h1>5GAME STORE</h1>
+        <div class="auth-links">
+            <a href="html/inicio/iniciar_sesion/login.html">Iniciar Sesión</a> | 
+            <a href="html/inicio/crear_cuenta/signup.html">Crear Cuenta</a>
+        </div>
+    </header>
+	<title>Carrito</title>
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+
+</head>
+<body>
+	<div class="container">
+		<h1>Carrito</h1>
+		<hr>
+		<table class="table">
+			<thead>
+			  <tr>
+				<th scope="col">#</th>
+				<th scope="col">Item</th>
+				<th scope="col">Cantidad</th>
+				<th scope="col">Acción</th>
+				<th scope="col">Total</th>
+			  </tr>
+			</thead>
+			<tbody id="items"></tbody>
+			<tfoot>
+			  <tr id="footer">
+				<th scope="row" colspan="5">Carrito vacío - comience a comprar!</th>
+			  </tr>
+			</tfoot>
+		  </table>
+		<div class="row" id="cards"></div>
+	</div>
+
+	<template id="template-footer">
+        <th scope="row" colspan="2">Total productos</th>
+        <td>10</td>
+        <td>
+            <button class="btn btn-danger btn-sm" id="vaciar-carrito">
+                vaciar todo
+            </button>
+        </td>
+        <td class="font-weight-bold">$ <span>5000</span></td>
+    </template>
+    
+    <template id="template-carrito">
+    <tr>
+        <th scope="row">id</th>
+        <td>Café</td>
+        <td>1</td>
+        <td>
+            <button class="btn btn-info btn-sm">
+                +
+            </button>
+            <button class="btn btn-danger btn-sm">
+                -
+            </button>
+        </td>
+        <td>$ <span>500</span></td>
+    </tr>
+    </template>
+
+
+	<template id="template-card">
+		<div class="col-12 mb-2 col-md-4">
+		    <div class="card">
+			    <img src="" alt="" class="card-img-top">
+			    <div class="card-body">
+			        <h5>Titulo</h5>
+			        <p>precio</p>
+			        <button class="btn btn-dark">Comprar</button>
+			    </div>
+		    </div>
+		</div>
+	</template>
+	
+
+<script src="../../JavaScrip/script.js"></script>
+</body>
+</html>

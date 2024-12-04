@@ -1,0 +1,65 @@
+body {
+    font-family: Arial, sans-serif;
+    background-image: url('img/fondo.gif') ;
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: #FFFFFF;
+    margin: 0;
+    padding: 0;
+}
+
+button {
+    background-color: #00CFFF;
+    font-size: 16px;
+    color: #FFFFFF;
+    border: none;
+    border-radius: 15px;
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #00FF76;
+}
+
+header {
+    background-color: #2B004E;
+    color: #FFFFFF;
+    padding: 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 1.5rem;
+}
+
+.auth-links {
+    text-align: center;
+    color: white;
+    text-decoration: none;
+    margin: 0 10px;
+}
+
+
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    max-width: 300px;
+    margin: auto;
+    padding: 2rem;
+    background-color: #a749ff36;
+    border-radius: 10px;
+}
+
+label {
+    font-size: 1rem;
+}
+
+input {
+    pad
