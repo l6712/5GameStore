@@ -12,13 +12,16 @@
 <body>
     <div class="ventana" id="vent" style="display: none;">
         <div>
-            <div class="salir"><a href="../../../../index.html"><img src="../../../../5GAME STORE_files/inicio.png"></a></div>
+            <div class="salir"><a href="../../../index2.html"><img src="../../../../5GAME STORE_files/inicio.png"></a></div>
             <h1>SECCIONES</h1>
             <a href="javascript:cerrar()">
                 <img src="../../../../5GAME STORE_files/error.png" alt="Cerrar ventana" id="cerrar">
             </a>
             <div class="lupa">
                 <input type="text" id="busqueda" placeholder="Buscar..." />
+                <button id="btnBuscar">
+                    <img src="../../../../5GAME STORE_files/busqueda.png" alt="Icono búsqueda" />
+                </button>
             </div>
         </div>
         <div>
@@ -84,26 +87,38 @@
             </div>
         </div>
     </div>
-    
-   <header>
+
+    <header>
         <div class="selec">
-            <button type="button" onclick="abrir()"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="icon-bars">
-                    <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
-                </svg>
-            </button>
+            <button type="button" onclick="abrir()"><img src="../../../../5GAME STORE_files/seleccion.png" id="section" alt="Icono secciones"></button>
         </div>
         <h1>5GAME STORE</h1>
         <div class="auth-links">
             <a href="../../../inicio/iniciar sesion/login.html">Iniciar Sesión</a> | 
-            <a href="../../../inicio/crear cuenta/signup.html">Crear Cuenta</a>
+            <a href="../../../inicio/crear cuenta/registro.html">Crear Cuenta</a>
         </div>
 
         <div class="container-icon"> 
             <a href="../../../carrito/carrito.html">
-                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="icon-cart" onclick="abrirCarrito()">
-                    <path stroke-linecap="round" stroke-linejoin="round" d="M2.25 3h1.386c.51 0 .955.343 1.087.835l.383 1.437M7.5 14.25a3 3 0 0 0-3 3h15.75m-12.75-3h11.218c1.121-2.3 2.1-4.684 2.924-7.138a60.114 60.114 0 0 0-16.536-1.84M7.5 14.25 5.106 5.272M6 20.25a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0Zm12.75 0a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0Z" />
-                </svg>
+                <svg 
+                xmlns="http://www.w3.org/2000/svg" 
+                fill="none" viewBox="0 0 24 24" 
+                stroke-width="1.5" 
+                stroke="currentColor" 
+                class="icon-cart" 
+                onclick="abrirCarrito()" 
+                > 
+                <path 
+                    stroke-linecap="round" 
+                    stroke-linejoin="round" 
+                    d="M15.75 10.5V6a3.75 3.75 0 10-7.5 0v4.5m11.356-1.993l1.263 12c.07.665-.45 1.243-1.119 1.243H4.25a1.125 1.125 0 01-1.12-1.243l1.264-12A1.125 1.125 0 015.513 7.5h12.974c.576 0 1.059.435 1.119 1.007zM8.625 10.5a.375.375 0 11-.75 0 .375.375 0 01.75 0z" 
+                />
             </a>
+            
+            </svg> 
+                    <div class="count-products"> 
+                        <span id="contador-productos">0</span> 
+                    </div>
         </div>
     </header>
 
@@ -144,21 +159,16 @@
                 <button class="prev" onclick="moverSlides(-1)">&#10094;</button> 
                 <button class="next" onclick="moverSlides(1)">&#10095;</button>
             </div>
-         </div>
-     <div class="div-informacion-producto">
-        <div class="informacion-producto">
-            <form action="../../../pagar/pagos.html" method="post">
             <h2>Black Ops 6</h2>
-            <p>
-                Obligado a convertirse en solitario. Cazado desde el interior. Este es Call of Duty: Black Ops 6. 
-                Desarrollado por los galardonados equipos de Treyarch y Raven, Black Ops 6 es un thriller de acción 
-                y espionaje con una alucinante narrativa y libre de las reglas para entablar combate.
-            </p>
-        </div>
-         <div class="precio-producto">
-            <h3>Precio: $1,599.00 MXN</h3>
-           <input type="hidden" name="producto" value="Celeste">
-                <input type="hidden" name="precio" value="227.99">
+            <form action="../../../pagar/pagos.html" method="post">
+                <p>
+                    Obligado a convertirse en solitario. Cazado desde el interior. Este es Call of Duty: Black Ops 6. 
+                    Desarrollado por los galardonados equipos de Treyarch y Raven, Black Ops 6 es un thriller de acción 
+                    y espionaje con una alucinante narrativa y libre de las reglas para entablar combate.
+                </p>
+                <h3>Precio: $1,599.00 MXN</h3>
+                <input type="hidden" name="producto" value="Black Ops 6">
+                <input type="hidden" name="precio" value="1599.00">
                 <button type="submit" class="add-to-cart">Agregar al Carrito</button>
             </form>
             <a href="../../../pagar/pagos.html"><button type="submit" class="pagar">Comprar Ahora</button> 
