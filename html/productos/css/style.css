@@ -1,6 +1,8 @@
 body {
-    font-family: 'Arial Rounded MT';
-    background-color: #c8c3327c;
+    font-family: Arial, sans-serif;
+    background-image: url('img/fondo.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
     margin: 0;
     padding: 0;
 }
@@ -16,40 +18,33 @@ html, body{
     align-items: center;
 }
 
-.icon-bars{
-    height: 90px;
-    color: #c52f4b;
-    cursor: pointer;
-}
-
 .icon-cart {
-    height: 90px;
-    color: #c52f4b;
+    width: 24px;
+    height: 24px;
     cursor: pointer;
 }
 
 /* Botones principales */
 .add-to-cart, .pagar {
     background-color: #008bff;
-    font-size: 40px;
-    color: #373737;
-    font-weight: 700;
+    font-size: 20px;
+    color: #fff;
     border: none;
     padding: 0.5rem 1rem;
-    border-radius: 8px;
+    border-radius: 5px;
     cursor: pointer;
+    margin-top: 0.5rem;
 }
 
-.add-to-cart:hover, .pagar:hover{
+.add-to-cart:hover {
     background-color: #0056b3;
-    color: #c52f4b;
 }
 
 
 /* Encabezado */
 header {
-    background-color: rgba(111, 167, 162, 0.466);
-    color: #1a83c4;
+    background-color: #b49628ff;
+    color: #FFFFFF;
     padding: 1rem;
     display: flex;
     justify-content: space-between;
@@ -58,10 +53,7 @@ header {
 
 header h1 {
     margin: 0;
-    font-family: 'Bauhaus 93';
-    font-size: 70px;
-    letter-spacing: 2px;
-    font-style: normal;
+    font-size: 1.5rem;
 }
 
 /* Botones de la barra de navegación (secciones y lupa) */
@@ -71,16 +63,11 @@ header h1 {
     cursor: pointer;
 }
 
+
 .auth-links a {
-    font-family: 'Arial Rounded MT';
-    color: #1a83c4;
-    font-size: 25px;
+    color: #fff;
     text-decoration: none;
     margin: 0 1rem;
-}
-
-.auth-links a:hover {
-    text-decoration: underline;
 }
 
 .auth-links a:hover {
@@ -95,6 +82,7 @@ header h1 {
 /* Contenedor de productos */
 div.producto {
     padding: 20px;
+    background-color: #00000091;
     color: #2B004E;
     margin: 1rem auto;
     padding: 1rem;
@@ -112,6 +100,9 @@ div.producto {
     transition: transform 0.3s ease;
 }
 
+.producto img:hover, video:hover {
+    filter: saturate(200%);
+}
 
 /* Imágenes específicas de productos con dimensiones */
 .producto img{
@@ -121,78 +112,25 @@ div.producto {
 }
 
 /*Texto Producto*/
-.informacion-producto{
-    background-color: rgba(111, 167, 162, 0.466);
-    padding: 1rem;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    border-radius: 10px;
-    width: 55%;
-    margin: 0 auto;
+
+h2{
+    color: #7f53e8ff;
+    font-size: 40px;
 }
 
-.div-informacion-producto{
-    margin: 1rem auto;
-    padding: 1rem;
-    text-align: center;
-    display: flex;
-    justify-content: space-around;
-}
-
-.precio-producto{
-    background-color: #e3e3e3;
-    padding: 20px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    border-radius: 10px;
-    width: 45%;
-    margin: 0 auto;
-    flex-direction: column;
-}
-
-.input{
-    margin-top: 0;
-}
-
-input{
-    font-family: 'Arial Rounded MT';
-}
-
-section button{
-    margin-bottom: 20px;
-    width: 400px;
-}
-
-h2 {
-    text-align: center;
-    color: #c52f4b;
-    margin-bottom: 2rem;
-    font-family: 'Bauhaus 93';
-    letter-spacing: 2px;
-    font-size: 70px;
-    font-style: normal;
-    margin-top: 0;
-    line-height: 0.8;
-}
-
-section p{
+p{
     font-size: 25px;
-    line-height: 1.2;
-    color: #373737;
+    color: #ffffff;
 }
 
 h3{
-    color: #1a83c4;
-    font-size: 55px;
-    margin: 10px;
+    color: #0056b3;
+    font-size: 30px;
 }
 
 /* Pie de página */
 footer {
-    background-color: #3C3A35;
-    color: #FFFFFF;
+    background-color: #3b3a35;
     text-align: center;
     padding: 1rem;
     position: relative;
@@ -200,29 +138,6 @@ footer {
     width: 100%;
 }
 
-h5{
-    font-size: 25px;
-    margin: 10px;
-    color: #FFFFFF;
-}
-
 footer p {
-    margin: 0;
-    font-family: Consolas;
-    line-height: 1.2;
-    color: #4e4e4e;
-    font-size: 20px;
-}
-
-.footer-acerca{
-    margin: 0;
-    font-family: Consolas;
-    line-height: 1.2;
-    color: #d8d8d8;
-    font-size: 20px;
-    text-decoration: none;
-}
-
-footer a {
-    color: #4e4e4e;
-}
+    color: #fff5fc;
+}   
