@@ -1,6 +1,5 @@
-
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -10,19 +9,17 @@
     <link rel="icon" type="image/png" href="../../../../5GAME STORE_files/logo-5gamestore.png">
     <title>Elden Ring</title>
 </head>
+
 <body>
     <div class="ventana" id="vent" style="display: none;">
         <div>
-            <div class="salir"><a href="../../../index2.html"><img src="../../../../5GAME STORE_files/inicio.png"></a></div>
+            <div class="salir"><a href="../../../../index.html"><img src="../../../../5GAME STORE_files/inicio.png"></a></div>
             <h1>SECCIONES</h1>
             <a href="javascript:cerrar()">
                 <img src="../../../../5GAME STORE_files/error.png" alt="Cerrar ventana" id="cerrar">
             </a>
             <div class="lupa">
                 <input type="text" id="busqueda" placeholder="Buscar..." />
-                <button id="btnBuscar">
-                    <img src="../../../../5GAME STORE_files/busqueda.png" alt="Icono búsqueda" />
-                </button>
             </div>
         </div>
         <div>
@@ -91,75 +88,53 @@
 
     <header>
         <div class="selec">
-            <button type="button" onclick="abrir()"><img src="../../../../5GAME STORE_files/seleccion.png" id="section" alt="Icono secciones"></button>
+            <button type="button" onclick="abrir()"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="icon-bars">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+                </svg>
+            </button>
         </div>
         <h1>5GAME STORE</h1>
         <div class="auth-links">
             <a href="../../../inicio/iniciar sesion/login.html">Iniciar Sesión</a> | 
-            <a href="../../../inicio/crear cuenta/registro.html">Crear Cuenta</a>
+            <a href="../../../inicio/crear cuenta/signup.html">Crear Cuenta</a>
         </div>
 
         <div class="container-icon"> 
-            <a href="../../../carrito/carrito.html">
-                <svg 
-                xmlns="http://www.w3.org/2000/svg" 
-                fill="none" viewBox="0 0 24 24" 
-                stroke-width="1.5" 
-                stroke="currentColor" 
-                class="icon-cart" 
-                onclick="abrirCarrito()" 
-                > 
-                <path 
-                    stroke-linecap="round" 
-                    stroke-linejoin="round" 
-                    d="M15.75 10.5V6a3.75 3.75 0 10-7.5 0v4.5m11.356-1.993l1.263 12c.07.665-.45 1.243-1.119 1.243H4.25a1.125 1.125 0 01-1.12-1.243l1.264-12A1.125 1.125 0 015.513 7.5h12.974c.576 0 1.059.435 1.119 1.007zM8.625 10.5a.375.375 0 11-.75 0 .375.375 0 01.75 0z" 
-                />
+            <a href="html/carrito/carrito.html">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="icon-cart" onclick="abrirCarrito()">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M2.25 3h1.386c.51 0 .955.343 1.087.835l.383 1.437M7.5 14.25a3 3 0 0 0-3 3h15.75m-12.75-3h11.218c1.121-2.3 2.1-4.684 2.924-7.138a60.114 60.114 0 0 0-16.536-1.84M7.5 14.25 5.106 5.272M6 20.25a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0Zm12.75 0a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0Z" />
+                </svg>
             </a>
-            
-            </svg> 
-                    <div class="count-products"> 
-                        <span id="contador-productos">0</span> 
-                    </div>
         </div>
     </header>
 
     <section>
         <div class="producto">
-            <img src="../../../../img/portadas/1.jpg">
+            <img src="img/2.jpg">
+                
             <div class="carrusel"> 
                 <div class="slide active"> 
-                    <img src="img/moto.jpg"> 
+                    <img src="img/bruja.webp"> 
                 </div> 
                 <div class="slide"> 
-                    <img src="img/nigga.jpg"> 
+                    <img src="img/castillo.avif"> 
                 </div> 
                 <div class="slide"> 
-                    <img src="img/huida.jpg"> 
+                    <img src="img/dragon.avif"> 
                 </div> 
                 <div class="slide"> 
-                    <img src="img/interior.jpg"> 
+                    <img src="img/Konzerte.webp"> 
                 </div> 
                 <div class="slide"> 
-                    <img src="img/mansion.jpg"> 
+                    <img src="img/malenia.webp"> 
                 </div> 
                 <div class="slide"> 
-                    <img src="img/militar.jpg"> 
-                </div>
-                <div class="slide"> 
-                    <img src="img/soldado.jpg"> 
-                </div> 
-                <div class="slide"> 
-                    <img src="img/zombies.jpg"> 
-                </div>
-                <div class="slide">
-                    <video src="img/hacha.webm" controls></video>
-                </div>
-                <div class="slide">
-                    <video src="img/warzone.webm" controls></video>
+                    <img src="img/jefe.webp"> 
                 </div>
                 <button class="prev" onclick="moverSlides(-1)">&#10094;</button> 
                 <button class="next" onclick="moverSlides(1)">&#10095;</button>
             </div>
+           </div>
         <div class="div-informacion-producto">
             <div class="informacion-producto">
                 <form action="../../../pagar/pagos.html" method="post">
@@ -172,16 +147,32 @@
             </div> 
             <div class="precio-producto">
                 <h3>Precio:<br>$ 819.00  Mex</h3><br>
-                <input type="hidden" name="producto" value="Elden Ring">
-                <input type="hidden" name="precio" value="819.00">
-                <button type="submit" class="add-to-cart">Agregar al Carrito</button>
-            </form>
-            <a href="../../../pagar/pagos.html"><button type="submit" class="pagar">Comprar Ahora</button> 
+                <input type="hidden" name="producto" value="Black Ops 6" class="input">
+                    <input type="hidden" name="precio" value="819.00">
+                    <button type="submit" class="add-to-cart">Agregar al Carrito</button>
+                    <a href="../../../pagar/pagos.html"><button type="submit" class="pagar">Comprar Ahora</button></a>
+                </form>
+            </div>
+            
         </div>
     </section>
 
-    <footer><p>© 2024 Tienda de Videojuegos. Todos los derechos reservados.</p></footer>
-    <script>
+    <footer>
+        <p>© 2024 Tienda de Videojuegos. Todos los derechos reservados.</p>
+        <div>
+            <div class="conocenos">
+                <h5>Acerca de</h5>
+                <a href="../html/Conocenos/acerca de.HTML" class="footer-acerca">Acerca de <br> 5GameStore</a>
+            </div>
+            <div>
+                <h5>Contacto</h5>
+                <p>Dirección: C. Labradores #749, Col. Valle de Chapultepec, Ensenada, Baja California, México</p>
+                <p>Teléfono Móvil: +52 (686) 369-28-68</p>
+                <p>Teléfono Fijo: +52 (646) 123-45-67</p>
+            </div>
+        </div>
+    </footer>
+<script>
     let carrito = {};
 
     document.addEventListener('DOMContentLoaded', () => {
