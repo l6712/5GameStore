@@ -1,0 +1,271 @@
+body {
+    font-family: 'Arial Rounded MT';
+    background-color: #c8c3327c;
+    color: #FFFFFF;
+    margin: 0;
+    padding: 0;
+}
+html, body{
+	overflow-x: hidden;
+	margin: 0;
+	padding: 0;
+}
+
+/*Carrito*/
+.container-icon {
+    display: flex;
+    align-items: center;
+}
+
+/*icons*/
+
+.icon-bars{
+    height: 90px;
+    color: #c52f4b;
+    cursor: pointer;
+}
+
+.icon-cart {
+    height: 90px;
+    color: #c52f4b;
+    cursor: pointer;
+}
+
+/* Botones principales */
+.producto button {
+    background-color: #008bff;
+    color: #fff;
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 0.5rem;
+}
+
+.producto button:hover {
+    background-color: #0056b3;
+}
+
+/* Encabezado */
+header {
+    background-color: rgba(111, 167, 162, 0.466);
+    color: #1a83c4;
+    padding: 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header h1 {
+    margin: 0;
+    font-family: 'Bauhaus 93';
+    font-size: 70px;
+    letter-spacing: 2px;
+    font-style: normal;
+}
+
+/* Botones de la barra de navegación (secciones y lupa) */
+.selec button {
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+.auth-links a {
+    font-family: 'Arial Rounded MT';
+    color: #1a83c4;
+    font-size: 25px;
+    text-decoration: none;
+    margin: 0 1rem;
+}
+
+.auth-links a:hover {
+    text-decoration: underline;
+}
+
+/* Sección productos */
+h2 {
+    text-align: center;
+    color: #c52f4b;
+    margin-bottom: 2rem;
+    font-family: 'Bauhaus 93';
+    letter-spacing: 2px;
+    font-size: 70px;
+    font-style: normal;
+}
+
+/*section juegos populares */
+.div-productos{
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	gap: 9%;
+}
+.div-productos > div:last-child{
+	margin-right: 0;
+}
+.div-producto-info{
+	padding: 0 2%;
+}
+.producto{
+	font-family: 'Arial Rounded MT';
+	color: #e89e00;
+	font-size: 20px;
+	text-align: center;
+	width: 100%;
+	background-color: #5f4dd3a9;
+	border-radius: 25px;
+}
+.producto a{
+	text-decoration: none;
+	color: #fba71d;
+}
+.producto:hover{
+	box-shadow: 0 10px 20px rgba(0, 0, 0, 0.8);
+}
+.img-producto-index{
+	border-radius: 15px;
+	display: block;
+}
+.producto img{
+	width: 100%;
+	height: 350px;
+	position: relative;
+	display: block;
+    object-fit: cover;
+	overflow: hidden;
+}
+
+.espacio-section-footer{
+	width: 100%;
+	height: 1100px;
+}
+/* Pie de página */
+footer {
+    background-color: #3C3A35;
+    color: #FFFFFF;
+    text-align: center;
+    padding: 1rem;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
+footer p {
+    margin: 0;
+}
+
+footer a {
+    color: #B3B3B3;
+}
+
+/* Otros estilos */
+#cerrar {
+    position: absolute;
+    height: 35px;
+    right: 10px;
+    top: 10px;
+}
+
+#busque {
+    position: absolute;
+    right: 55px;
+    top: 65px;
+    height: 35px;
+    width: 35px;
+}
+
+.salir {
+    float: left;
+}
+
+#cosas {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    overflow: hidden;
+    box-sizing: border-box;
+    width: 100%;
+}
+
+#hardware, #generos, #plataformas {
+    height: auto;
+    width: 150px;
+    text-align: center;
+}
+
+#cosas > * {
+    flex: 1;
+    margin: 0 10px;
+}
+
+#cosas h3 {
+    text-decoration: underline;
+}
+
+.produc-lincks {
+    text-decoration: none;
+    color: #FFF;
+    font-size: 24px;
+}
+
+.produc-lincks:hover {
+    color: slateblue;
+    text-decoration: underline;
+}
+
+#redes_e_info {
+    position: relative;
+    top: 12%;
+}
+
+/*Busqueda*/
+.lupa {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 5px;
+    background-color: #6a45837a;
+    width: fit-content;
+}
+
+.lupa input {
+    border: none;
+    outline: none;
+    padding: 5px;
+    font-size: 16px;
+    width: 200px;
+}
+
+.lupa button {
+    background: none;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+}
+
+.lupa img {
+    width: 20px;
+    height: 20px;
+    color: aqua;
+}
+
+/*Ventana*/
+.ventana {
+    background-color: rgba(0, 0, 0, 0.85);
+    width: 70%;
+    color: #FFF;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 18px;
+    text-align: center;
+    padding: 36px;
+    min-height: 250px;
+    border-radius: 15px;
+    position: fixed; /* Cambiado a fixed */
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    display: none;
+    z-index: 1000; /* Asegura que la ventana esté por encima de otros elementos */
+}
